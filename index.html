@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>গরুর ওজন ক্যালকুলেটর</title>
+</head>
+<body>
+  <h1>গরুর ওজন ক্যালকুলেটর</h1>
+  <label>গরুর দৈর্ঘ্য (ইঞ্চিতে):</label>
+  <input type="number" id="length"><br>
+  <label>গরুর বুকের বেড় (ইঞ্চিতে):</label>
+  <input type="number" id="girth"><br><br>
+  <button onclick="calculateWeight()">ওজন গণনা করো</button>
+  <h2 id="result"></h2>
+
+  <script>
+    function calculateWeight() {
+      let girth = document.getElementById("girth").value;
+      let length = document.getElementById("length").value;
+      let weight = (girth * girth * length) / 300;
+      document.getElementById("result").innerHTML = "আনুমানিক ওজন: " + weight.toFixed(2) + " কেজি";
+    }
+  </script>
+</body>
+</html>
